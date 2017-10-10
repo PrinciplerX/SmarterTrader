@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60296B36-32D0-39E6-AC15-B5CB3EB2C546}</ProjectGuid>
+    <RootNamespace>TradingCurveWidgets</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>TradingCurveWidgets</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>TradingCurveWidgets</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TradingCurveWidgets</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TradingCurveWidgets</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;C:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt;..\TradeData;C:\qt\qt5.6.0\5.6\msvc2015\include;C:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets;C:\qt\qt5.6.0\5.6\msvc2015\include\QtGui;C:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE;C:\qt\qt5.6.0\5.6\msvc2015\include\QtCore;release;C:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;TRADINGCURVEWIDGETS_LIBRARY;QWT_DLL;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\qwtd.lib;TradeData.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Users\PrinciplerX\Desktop\Qt;C:\Users\PrinciplerX\OneDrive\Documents\QtProject\SmarterTrader\TradeData\release;C:\qt\qt5.6.0\5.6\msvc2015\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\TradingCurveWidgets.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;TRADINGCURVEWIDGETS_LIBRARY;QWT_DLL;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;C:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt;..\TradeData;C:\qt\qt5.6.0\5.6\msvc2015\include;C:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets;C:\qt\qt5.6.0\5.6\msvc2015\include\QtGui;C:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE;C:\qt\qt5.6.0\5.6\msvc2015\include\QtCore;debug;C:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;TRADINGCURVEWIDGETS_LIBRARY;QWT_DLL;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\qwtd.lib;TradeData.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Users\PrinciplerX\Desktop\Qt;C:\Users\PrinciplerX\OneDrive\Documents\QtProject\SmarterTrader\TradeData\debug;C:\qt\qt5.6.0\5.6\msvc2015\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\TradingCurveWidgets.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;TRADINGCURVEWIDGETS_LIBRARY;QWT_DLL;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="abstractaxis.cpp" />
+    <ClCompile Include="abstractitemplot.cpp" />
+    <ClCompile Include="abstractplot.cpp" />
+    <ClCompile Include="abstractplotlayout.cpp" />
+    <ClCompile Include="atr.cpp" />
+    <ClCompile Include="axisdata.cpp" />
+    <ClCompile Include="bar.cpp" />
+    <ClCompile Include="bias.cpp" />
+    <ClCompile Include="boll.cpp" />
+    <ClCompile Include="candlestick.cpp" />
+    <ClCompile Include="close.cpp" />
+    <ClCompile Include="datescaledraw.cpp" />
+    <ClCompile Include="datescalemap.cpp" />
+    <ClCompile Include="datescalewidget.cpp" />
+    <ClCompile Include="datesequence.cpp" />
+    <ClCompile Include="datesequencetransform.cpp" />
+    <ClCompile Include="Debug\moc_abstractaxis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_abstractitemplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_multicanvasplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_percentageaxis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_realtimecurveplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_realtimeplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_realtimeplotpanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_restingordertable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_simpleplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_simpleplotcanvas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_simplescalewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_splitterplotcanvas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_splitterscalewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_ticktable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_titledplotaxis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_traceplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_traceplotcanvas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tracescalewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tradingcurveplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_tradingcurveplotpanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="dmi.cpp" />
+    <ClCompile Include="ema.cpp" />
+    <ClCompile Include="globalaverage.cpp" />
+    <ClCompile Include="high.cpp" />
+    <ClCompile Include="kdj.cpp" />
+    <ClCompile Include="low.cpp" />
+    <ClCompile Include="ma.cpp" />
+    <ClCompile Include="macd.cpp" />
+    <ClCompile Include="mavol.cpp" />
+    <ClCompile Include="multicanvasplot.cpp" />
+    <ClCompile Include="percentageaxis.cpp" />
+    <ClCompile Include="percentagescaledraw.cpp" />
+    <ClCompile Include="pivotpoint.cpp" />
+    <ClCompile Include="plaincurve.cpp" />
+    <ClCompile Include="plotablecurve.cpp" />
+    <ClCompile Include="plotablecurvefactory.cpp" />
+    <ClCompile Include="plotableitem.cpp" />
+    <ClCompile Include="realtimecurveplot.cpp" />
+    <ClCompile Include="realtimeplot.cpp" />
+    <ClCompile Include="realtimeplotpanel.cpp" />
+    <ClCompile Include="realtimevolume.cpp" />
+    <ClCompile Include="Release\moc_abstractaxis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_abstractitemplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_multicanvasplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_percentageaxis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_realtimecurveplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_realtimeplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_realtimeplotpanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_restingordertable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_simpleplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_simpleplotcanvas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_simplescalewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_splitterplotcanvas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_splitterscalewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_ticktable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_titledplotaxis.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_traceplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_traceplotcanvas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tracescalewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tradingcurveplot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_tradingcurveplotpanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="restingordertable.cpp" />
+    <ClCompile Include="simpleplot.cpp" />
+    <ClCompile Include="simpleplotcanvas.cpp" />
+    <ClCompile Include="simpleplotlayout.cpp" />
+    <ClCompile Include="simplescaledraw.cpp" />
+    <ClCompile Include="simplescalewidget.cpp" />
+    <ClCompile Include="splitterplotcanvas.cpp" />
+    <ClCompile Include="splitterscaledraw.cpp" />
+    <ClCompile Include="splitterscalewidget.cpp" />
+    <ClCompile Include="std.cpp" />
+    <ClCompile Include="ticktable.cpp" />
+    <ClCompile Include="titledplotaxis.cpp" />
+    <ClCompile Include="tr.cpp" />
+    <ClCompile Include="traceplot.cpp" />
+    <ClCompile Include="traceplotcanvas.cpp" />
+    <ClCompile Include="tracescaledraw.cpp" />
+    <ClCompile Include="tracescalewidget.cpp" />
+    <ClCompile Include="tradingcurveplot.cpp" />
+    <ClCompile Include="tradingcurveplotpanel.cpp" />
+    <ClCompile Include="tradingcurvescaleengine.cpp" />
+    <ClCompile Include="volume.cpp" />
+    <ClCompile Include="wms.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="abstractaxis.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing abstractaxis.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing abstractaxis.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="abstractitemplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing abstractitemplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing abstractitemplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="abstractplot.h" />
+    <ClInclude Include="abstractplotlayout.h" />
+    <ClInclude Include="atr.h" />
+    <ClInclude Include="axisdata.h" />
+    <ClInclude Include="bar.h" />
+    <ClInclude Include="bias.h" />
+    <ClInclude Include="boll.h" />
+    <ClInclude Include="candlestick.h" />
+    <ClInclude Include="close.h" />
+    <ClInclude Include="datescaledraw.h" />
+    <ClInclude Include="datescalemap.h" />
+    <ClInclude Include="datescalewidget.h" />
+    <ClInclude Include="datesequence.h" />
+    <ClInclude Include="datesequencetransform.h" />
+    <ClInclude Include="dmi.h" />
+    <ClInclude Include="ema.h" />
+    <ClInclude Include="globalaverage.h" />
+    <ClInclude Include="high.h" />
+    <ClInclude Include="kdj.h" />
+    <ClInclude Include="low.h" />
+    <ClInclude Include="ma.h" />
+    <ClInclude Include="macd.h" />
+    <ClInclude Include="mavol.h" />
+    <CustomBuild Include="multicanvasplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing multicanvasplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing multicanvasplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="percentageaxis.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing percentageaxis.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing percentageaxis.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="percentagescaledraw.h" />
+    <ClInclude Include="pivotpoint.h" />
+    <ClInclude Include="plaincurve.h" />
+    <ClInclude Include="plotablecurve.h" />
+    <ClInclude Include="plotablecurvefactory.h" />
+    <ClInclude Include="plotableitem.h" />
+    <CustomBuild Include="realtimecurveplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing realtimecurveplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing realtimecurveplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="realtimeplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing realtimeplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing realtimeplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="realtimeplotpanel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing realtimeplotpanel.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing realtimeplotpanel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="realtimevolume.h" />
+    <CustomBuild Include="restingordertable.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing restingordertable.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing restingordertable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing simpleplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing simpleplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="simpleplotcanvas.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing simpleplotcanvas.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing simpleplotcanvas.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="simpleplotlayout.h" />
+    <ClInclude Include="simplescaledraw.h" />
+    <CustomBuild Include="simplescalewidget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing simplescalewidget.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing simplescalewidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="splitterplotcanvas.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing splitterplotcanvas.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing splitterplotcanvas.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="splitterscaledraw.h" />
+    <CustomBuild Include="splitterscalewidget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing splitterscalewidget.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing splitterscalewidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="std.h" />
+    <CustomBuild Include="ticktable.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ticktable.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ticktable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="titledplotaxis.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing titledplotaxis.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing titledplotaxis.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="tr.h" />
+    <CustomBuild Include="traceplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing traceplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing traceplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="traceplotcanvas.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing traceplotcanvas.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing traceplotcanvas.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="tracescaledraw.h" />
+    <CustomBuild Include="tracescalewidget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tracescalewidget.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tracescalewidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="tradingcurveplot.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tradingcurveplot.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tradingcurveplot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="tradingcurveplotpanel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\release" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tradingcurveplotpanel.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DTRADINGCURVEWIDGETS_LIBRARY -DQWT_DLL -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-IC:\Qt\Qt5.6.0\5.6\msvc2015\include\Qwt" "-I.\..\TradeData" "-IC:\qt\qt5.6.0\5.6\msvc2015\include" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtWidgets" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtGui" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtANGLE" "-IC:\qt\qt5.6.0\5.6\msvc2015\include\QtCore" "-I.\debug" "-IC:\qt\qt5.6.0\5.6\msvc2015\mkspecs\win32-msvc2015"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tradingcurveplotpanel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="tradingcurvescaleengine.h" />
+    <ClInclude Include="tradingcurvewidgets_global.h" />
+    <ClInclude Include="volume.h" />
+    <ClInclude Include="wms.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="msvc2015" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

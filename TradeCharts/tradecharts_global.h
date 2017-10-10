@@ -1,0 +1,12 @@
+#ifndef TRADECHARTS_GLOBAL_H
+#define TRADECHARTS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(TRADECHARTS_LIBRARY)
+#  define TRADECHARTS_EXPORT Q_DECL_EXPORT
+#else
+#  define TRADECHARTS_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TRADECHARTS_GLOBAL_H

@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SuperTrader", "MainFrame\SuperTrader.vcxproj", "{DCDF225E-2E72-3E83-81C0-46470978FDEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{60296B36-32D0-39E6-AC15-B5CB3EB2C546} = {60296B36-32D0-39E6-AC15-B5CB3EB2C546}
+		{CC34EE69-3403-30A4-8944-0EFAFCF50ABB} = {CC34EE69-3403-30A4-8944-0EFAFCF50ABB}
+		{D2446E3C-A034-3CAF-872F-BD251BE324F6} = {D2446E3C-A034-3CAF-872F-BD251BE324F6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TradingCurveWidgets", "TradingCurveWidgets\TradingCurveWidgets.vcxproj", "{60296B36-32D0-39E6-AC15-B5CB3EB2C546}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC34EE69-3403-30A4-8944-0EFAFCF50ABB} = {CC34EE69-3403-30A4-8944-0EFAFCF50ABB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TradeData", "TradeData\TradeData.vcxproj", "{CC34EE69-3403-30A4-8944-0EFAFCF50ABB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExpandedWidgets", "ExpandedWidgets\ExpandedWidgets.vcxproj", "{D2446E3C-A034-3CAF-872F-BD251BE324F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCDF225E-2E72-3E83-81C0-46470978FDEF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DCDF225E-2E72-3E83-81C0-46470978FDEF}.Debug|Win32.Build.0 = Debug|Win32
+		{DCDF225E-2E72-3E83-81C0-46470978FDEF}.Release|Win32.ActiveCfg = Release|Win32
+		{DCDF225E-2E72-3E83-81C0-46470978FDEF}.Release|Win32.Build.0 = Release|Win32
+		{60296B36-32D0-39E6-AC15-B5CB3EB2C546}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60296B36-32D0-39E6-AC15-B5CB3EB2C546}.Debug|Win32.Build.0 = Debug|Win32
+		{60296B36-32D0-39E6-AC15-B5CB3EB2C546}.Release|Win32.ActiveCfg = Release|Win32
+		{60296B36-32D0-39E6-AC15-B5CB3EB2C546}.Release|Win32.Build.0 = Release|Win32
+		{CC34EE69-3403-30A4-8944-0EFAFCF50ABB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC34EE69-3403-30A4-8944-0EFAFCF50ABB}.Debug|Win32.Build.0 = Debug|Win32
+		{CC34EE69-3403-30A4-8944-0EFAFCF50ABB}.Release|Win32.ActiveCfg = Release|Win32
+		{CC34EE69-3403-30A4-8944-0EFAFCF50ABB}.Release|Win32.Build.0 = Release|Win32
+		{D2446E3C-A034-3CAF-872F-BD251BE324F6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D2446E3C-A034-3CAF-872F-BD251BE324F6}.Debug|Win32.Build.0 = Debug|Win32
+		{D2446E3C-A034-3CAF-872F-BD251BE324F6}.Release|Win32.ActiveCfg = Release|Win32
+		{D2446E3C-A034-3CAF-872F-BD251BE324F6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

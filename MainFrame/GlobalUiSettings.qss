@@ -1,0 +1,55 @@
+QMainWindow{
+    margin:0px;
+    padding:0px 0px 0px 0px;
+}
+
+QTabBar#ChoiceTabBar {
+    height: 20px;
+    font: 12px;
+}
+
+QTabBar#ChoiceTabBar::tab {
+    height: 20px;
+    font: 12px;
+}
+
+QTabBar#PanelTabBar::tab{
+    border-color:white;
+    font-size:15px;
+    color:#666666;
+    margin-left:10px;
+    margin-top:4px;
+    margin-right:10px;
+    margin-bottom:4px
+}
+
+QTabBar#PanelTabBar::tab:hover{
+    border-color:white;
+    font-size:15px;
+    color:black;
+    margin-left:10px;
+    margin-top:4px;
+    margin-right:10px;
+    margin-bottom:4px
+}
+
+QTabBar#PanelTabBar::tab:selected{
+    border-color:white;
+    font:bold;
+    font-size:15px;
+    color:black;
+    margin-left:10px;
+    margin-top:4px;
+    margin-right:10px;
+    margin-bottom:4px
+}
+
+QTabBar#DockerTabBar {
+    height: 25px;
+    font: 12px;
+}
+
+QTabBar#DockerTabBar::tab {
+    height: 25px;
+    font: 12px;
+}
